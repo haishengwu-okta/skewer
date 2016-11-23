@@ -2,15 +2,28 @@
 <html>
     <head>
         <title>Skewer Daemon</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
         <script src="./node_modules/jquery/dist/jquery.js"></script>
         <script src="./node_modules/underscore/underscore.js"></script>
         <script src="./node_modules/backbone/backbone.js"></script>
         <script src="./node_modules/ramda/dist/ramda.js"></script>
+        <script src="./node_modules/moment/moment.js"></script>
         <script src="http://127.0.0.1:13579/skewer"></script>
+        <style>
+         .box { border: 1px solid #C0C0C0; margin-bottom: 15px; padding: 15px 35px; }
+         .bottom::before {
+             content: '\22A5';
+             color: #007dc1;
+             font-size: 50px;
+         }
+        </style>
     </head>
     <body>
         <h1>Docs</h1>
-        <ul>
+
+        <ul class="box">
             <li>
                 <label>Underscore</label>
                 <a href="http://backbonejs.org/">Online</a>
@@ -26,5 +39,19 @@
                 <a href="http://ramdajs.com/docs/">Online</a>
             </li>
         </ul>
+
+        <p class="box">
+            <span class="bottom">&perp;</span>
+        </p>
+
+        <div class="box">
+            <p id="torii-progress-bar">91% completed</p>
+
+            <div id="torii-progress-bar-outer" style="width: 100px; background-color: white; border: 1px solid #cacaca; padding: 5px;">
+                <div id="torii-progress-bar-inner" style="width: 91%; height: 20px; background-color: #46b3e9; "></div>
+            </div>
+        </div>
+
+
     </body>
 </html>
