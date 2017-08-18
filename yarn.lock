@@ -83,6 +83,10 @@ mkdirp@0.5.x:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.18.1:
+  version "2.18.1"
+  resolved "https://artifacts.aue1d.saasure.com:443/artifactory/api/npm/npm-okta-master/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
+
 opener@~1.4.0:
   version "1.4.3"
   resolved "https://artifacts.aue1d.saasure.com:443/artifactory/api/npm/npm-okta-master/opener/-/opener-1.4.3.tgz#5c6da2c5d7e5831e8ffa3964950f8d6674ac90b8"

@@ -5,7 +5,9 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        <script src="./node_modules/jquery/dist/jquery.js"></script>
+        <!-- <script src="./node_modules/jquery/dist/jquery.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
         <script src="./node_modules/underscore/underscore.js"></script>
         <script src="./node_modules/backbone/backbone.js"></script>
         <script src="./node_modules/ramda/dist/ramda.js"></script>
@@ -36,9 +38,15 @@
             </li>
             <li>
                 <label>Ramda</label>
+                <a href="http://ramdajs.com/docs/" referrerpolicy="no-referrer">Online without referrer</a>
                 <a href="http://ramdajs.com/docs/">Online</a>
             </li>
         </ul>
+
+        <div class="box">
+            <iframe src="http://localhost:9090" referrerpolicy="no-referrer">
+            </iframe>
+        </div>
 
         <p class="box">
             <span class="bottom">&perp;</span>
@@ -51,6 +59,11 @@
                 <div id="torii-progress-bar-inner" style="width: 91%; height: 20px; background-color: #46b3e9; "></div>
             </div>
         </div>
+
+        <script>
+         //$('abc <span>hello</span>');
+         //$('<span>world</span> efd');
+        </script>
 
 
     </body>
