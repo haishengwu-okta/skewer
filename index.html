@@ -5,13 +5,16 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        <!-- <script src="./node_modules/jquery/dist/jquery.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> -->
+
+        <script src="./node_modules/requirejs/require.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
         <script src="./node_modules/underscore/underscore.js"></script>
         <script src="./node_modules/backbone/backbone.js"></script>
         <script src="./node_modules/ramda/dist/ramda.js"></script>
         <script src="./node_modules/moment/moment.js"></script>
+
         <script src="http://127.0.0.1:13579/skewer"></script>
         <style>
          .box { border: 1px solid #C0C0C0; margin-bottom: 15px; padding: 15px 35px; }
@@ -60,11 +63,26 @@
             </div>
         </div>
 
-        <script>
-         //$('abc <span>hello</span>');
-         //$('<span>world</span> efd');
-        </script>
+        <div class="box main-partial">
+            <button id="load-partial">Load Partial</button>
+        </div>
 
+        <script>
+
+         const loadPartial = () => {
+             $.get('/partial-main.html')
+              .then((resp) => {
+                  $('.partial').remove()
+                  $('.main-partial').append(resp);
+              })
+         };
+
+         $('#load-partial').click(loadPartial);
+
+         $(function () {
+             console.log('hello main');
+         })
+        </script>
 
     </body>
 </html>
